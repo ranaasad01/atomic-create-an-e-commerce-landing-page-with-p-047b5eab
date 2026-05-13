@@ -2,12 +2,12 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-800 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-pink-950 via-pink-900 to-pink-800 text-white">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-600/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-36">
@@ -27,7 +27,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtext */}
-          <p className="text-lg sm:text-xl text-indigo-200 leading-relaxed mb-10 max-w-xl">
+          <p className="text-lg sm:text-xl text-pink-200 leading-relaxed mb-10 max-w-xl">
             Curated collections of premium electronics, fashion, home goods, and more &mdash; all at prices that make sense. Free shipping on orders over $50.
           </p>
 
@@ -58,7 +58,7 @@ export default function Hero() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-indigo-300 mt-0.5">{stat.label}</div>
+                <div className="text-sm text-pink-300 mt-0.5">{stat.label}</div>
               </div>
             ))}
           </div>
