@@ -1,14 +1,15 @@
 "use client";
 
-import { ShoppingCart, Menu, X, Sparkles } from 'lucide-react';
 import { useState } from "react";
+import { ShoppingCart, Menu, X, Sparkles } from 'lucide-react';
+
 import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
   const { totalItems, dispatch } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navLinks = ["Shop", "Collections", "Sale", "About"];
+  const navLinks = ["Shop", "Collections", "Sale", "About", "Contact Us"];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm">
@@ -29,7 +30,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={link === "Contact Us" ? "/contact" : "#"}
                 className="text-sm font-medium text-neutral-600 hover:text-indigo-600 transition-colors relative group"
               >
                 {link}
@@ -74,7 +75,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={link === "Contact Us" ? "/contact" : "#"}
                 className="block px-3 py-2 text-sm font-medium text-neutral-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
